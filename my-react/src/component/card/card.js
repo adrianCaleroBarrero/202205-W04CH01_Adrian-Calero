@@ -1,5 +1,4 @@
 import { chapters } from "../../model/dates";
-import { useState } from "react";
 import { Buttons } from "../buttons/buttons";
 
 export function Card() {
