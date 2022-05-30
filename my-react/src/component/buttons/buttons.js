@@ -1,14 +1,18 @@
 import { useState } from "react";
 
 export function Buttons() {
-    let [check, setCheck] = useState("gentleman__icon");
+    let [check, setCheck] = useState(false);
     function checked() {
-        setCheck((check = "gentleman__icon--fix"));
+        setCheck((prev) => !prev);
     }
     return (
         <>
             <i
-                className={"icon " + check + " fas fa-check"}
+                className={
+                    check
+                        ? "icon fas fa-check gentleman__icon--fix"
+                        : "icon fas fa-check gentleman__icon"
+                }
                 onClick={checked}
             ></i>
             <i className="icon gentleman__icon gentleman__icon--delete fas fa-times"></i>
